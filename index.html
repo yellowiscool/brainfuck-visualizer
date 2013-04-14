@@ -22,7 +22,7 @@
     <section class="editor">
         <textarea id="source" cols="30" rows="10">
 +++++ +++++             initialize counter (cell #0) to 10
-[                       use loop to set the next four cells to 70/100/30/10
+[                       use loop to set 70/100/30/10
     > +++++ ++              add  7 to cell #1
     > +++++ +++++           add 10 to cell #2
     > +++                   add  3 to cell #3
@@ -122,25 +122,41 @@
                 };
                 var token = tokens[action];
                 var cell = tape.models[pointer.get("index")];
-                if (token == "<") {
-                    pointer.left();
-                } else if (token == ">") {
-                    pointer.right();
-                } else if (token == "-") {
-                    cell.dec();
-                } else if (token == "+") {
-                    cell.inc();
-                } else if (token == ",") {
-                } else if (token == ".") {
-                    console.log(String.fromCharCode(cell.get('value')));
-                } else if (token == "[") {
-                    jumps.push(action)
-                } else if (token == "]") {
-                    if (cell.get("value") > 0) {
-                        action = jumps[jumps.length-1];
-                    } else {
-                        jumps.pop();
-                    }
+                switch (token) {
+                    case "<":
+                        pointer.left();
+                        break;
+
+                    case ">":
+                        pointer.right();
+                        break;
+
+                    case "-":
+                        cell.dec();
+                        break;
+
+                    case "+":
+                        cell.inc();
+                        break;
+
+                    case ",":
+                        // not implemented
+                        break;
+
+                    case ".":
+                        console.log(String.fromCharCode(cell.get('value')));
+                        break;
+
+                    case "[":
+                        jumps.push(action);
+                        break;
+
+                    case "]":
+                        if (cell.get("value") > 0) {
+                            action = jumps[jumps.length - 1];
+                        } else {
+                            jumps.pop();
+                        }
                 }
                 action++;
             }
@@ -157,11 +173,11 @@
 
             var interpreter = new Interpreter($("#source").val(), tape, pointer);
 
-            var next = setInterval(function () {
+            var run = setInterval(function () {
                 try {
                     interpreter.next()
                 } catch (e) {
-                    clearInterval(next);
+                    clearInterval(run);
                 }
             }, 70);
 
