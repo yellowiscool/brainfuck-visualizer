@@ -1,7 +1,7 @@
 body {
     font-family: Helvetica, sans-serif;
     width: 900px;
-    margin: auto;
+    margin: auto auto 80px;
 }
 
 h3 {
@@ -96,10 +96,27 @@ section.machine {
     #interpreter #output {
         font-family: monospace;
         font-size: 17px;
-        margin: 0;
+        margin: 0 22px 0 0;
         background-color: #eeeeee;
         min-height: 1.2em;
         padding: 10px;
         color: #5d5d5d;
+    }
+
+    a {
+        color: #575757;
+    }
+
+    table {
+        padding: 4px 10px;
+    }
+
+    table td {
+        padding: 10px;
+        color: #494949;
+    }
+
+    section#info {
+        margin: 0 20px;
     }
 
