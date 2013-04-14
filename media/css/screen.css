@@ -93,8 +93,12 @@ section.machine {
         }
 
     #interpreter #output {
+        font-family: monospace;
+        font-size: 17px;
         margin: 0;
         background-color: #eeeeee;
-        min-height: 3em;
+        min-height: 1.2em;
+        padding: 10px;
+        color: #5d5d5d;
     }
 

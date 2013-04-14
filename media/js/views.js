@@ -17,7 +17,7 @@ var PointerView = Backbone.View.extend({
     render: function () {
         this.$el.animate({
             "margin-left": this.model.get("index") * this.$el.width()
-        }, 70);
+        }, 30);
         return this;
     }
 });
@@ -45,7 +45,7 @@ var TapeView = Backbone.View.extend({
 
 
 var InterpreterView = Backbone.View.extend({
-    delay: 1,
+    delay: 100,
     el: "#interpreter",
     initialize: function (options) {
         this.pointer = options.pointer;
@@ -59,6 +59,7 @@ var InterpreterView = Backbone.View.extend({
         "click #stop": "stop"
     },
     render: function () {
+        this.output = this.$el.find("#output");
         this.buttons = new ButtonSwitchView({
             el: this.el
         }).render();
@@ -69,6 +70,7 @@ var InterpreterView = Backbone.View.extend({
     },
     run: function () {
         this.reset();
+        this.output.empty();
         this.interpreter = new Interpreter(
             this.editor.val(),
             this.tape,
@@ -77,7 +79,7 @@ var InterpreterView = Backbone.View.extend({
         this.continue();
     },
     out: function (cell) {
-        this.$el.find("#output").append(cell.char());
+        this.output.append(cell.char());
     },
     continue: function () {
         this.interval = setInterval(function () {
