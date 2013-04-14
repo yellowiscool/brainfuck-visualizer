@@ -1,12 +1,16 @@
+Backbone.Model.prototype.increase = function (key, addition) {
+    this.set(key, this.get(key) + addition)
+};
+
 var Cell = Backbone.Model.extend({
     defaults: {
         value: 0
     },
     inc: function () {
-        this.set("value", this.get("value") + 1);
+        this.increase("value", 1);
     },
     dec: function () {
-        this.set("value", this.get("value") - 1);
+        this.increase("value", -1);
     },
     char: function () {
         return String.fromCharCode(this.get("value"))
@@ -22,9 +26,9 @@ var Pointer = Backbone.Model.extend({
         index: 0
     },
     left: function () {
-        this.set("index", this.get("index") - 1);
+        this.increase("index", -1);
     },
     right: function () {
-        this.set("index", this.get("index") + 1);
+        this.increase("index", +1);
     }
 });
