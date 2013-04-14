@@ -4,6 +4,10 @@ body {
     margin: auto;
 }
 
+h3 {
+    color: #505050;
+    margin: 10px 0;
+}
 
 section.machine {
     margin-top: 40px;
@@ -56,12 +60,12 @@ section.machine {
         }
 
         section.editor {
-            margin: 100px 18px;
+            margin: 40px 18px;
         }
 
         section.editor textarea {
             width: 815px;
-            height: 400px;
+            height: 315px;
             background-color: #5b5b5b;
             border: 3px solid #3e3e3e;
             resize: none;
@@ -71,3 +75,26 @@ section.machine {
             font-family: monospace;
             padding: 10px;
         }
+        section.editor .button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            background-color: #eeeeee;
+            display: block;
+            float: left;
+            color: gray;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        section.editor .hidden {
+            display: none;
+        }
+        section.editor .button:active {
+            background-color: #e9e9e9;
+        }
+
+    #interpreter #output {
+        margin: 0;
+        background-color: #eeeeee;
+        min-height: 3em;
+    }
+
