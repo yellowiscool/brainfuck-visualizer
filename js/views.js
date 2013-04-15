@@ -120,8 +120,7 @@ var InterpreterView = Backbone.View.extend({
         this.reset();
     },
     sourceChange: function() {
-        this.pause();
-        this.reset();        
+        this.stop();        
         $("#source").html($("#source").text());
     }
 });
