@@ -72,7 +72,7 @@ var InterpreterView = Backbone.View.extend({
         this.reset();
         this.output.empty();
         this.interpreter = new Interpreter(
-            this.editor.val(),
+            this.editor.text(),
             this.tape,
             this.pointer,
             this.out.bind(this));
@@ -83,8 +83,20 @@ var InterpreterView = Backbone.View.extend({
     },
     continue: function () {
         this.interval = setInterval(function () {
-            try { this.interpreter.next() }
-            catch (e) {
+            try {
+                var action = this.interpreter.next();
+                $("#source span.caret").contents().unwrap();
+                var src = $("#source").text();
+                // XXX: There probably is a more elegant way to preserve the
+                //      encoded characters. (< as &lt; and so on)
+                var e = $('<div/>');
+                src = e.text(src.substr(0, action)).html()
+                    + "<span class=\"caret\">"
+                    + e.text(src.charAt(action)).html()
+                    + "</span>"
+                    + e.text(src.substr(action + 1)).html();
+                $("#source").html(src);
+            } catch (e) {
                 clearInterval(this.interval);
                 this.buttons.stop();
             }
