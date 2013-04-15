@@ -56,7 +56,8 @@ var InterpreterView = Backbone.View.extend({
         "click #run": "run",
         "click #pause": "pause",
         "click #continue": "continue",
-        "click #stop": "stop"
+        "click #stop": "stop",
+        "keyup #source": "sourceChange"
     },
     render: function () {
         this.output = this.$el.find("#output");
@@ -117,6 +118,9 @@ var InterpreterView = Backbone.View.extend({
     stop: function () {
         this.pause();
         this.reset();
+    },
+    sourceChange: function() {
+        $("#source").html($("#source").text());
     }
 });
 
