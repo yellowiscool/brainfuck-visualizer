@@ -64,6 +64,18 @@ section.machine {
             margin: 40px 18px;
         }
 
+        section.editor .actions {
+            margin-bottom: 10px;
+        }
+
+        section.editor .actions:after {
+            display: block;
+            content: '';
+            clear: both;
+            width: 0;
+            height: 0;
+        }
+
         section.editor #source {
             width: 815px;
             height: 315px;
@@ -92,7 +104,6 @@ section.machine {
             float: left;
             color: gray;
             text-decoration: none;
-            margin-bottom: 10px;
         }
         section.editor .hidden {
             display: none;
