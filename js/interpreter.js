@@ -1,4 +1,4 @@
-var Interpreter = function (source, tape, pointer, out) {
+var Interpreter = function (source, tape, pointer, out, instruction) {
     /*
     * Brainfuck Interpreter Class
     * @source: Brainfuck script
@@ -28,6 +28,7 @@ var Interpreter = function (source, tape, pointer, out) {
             action++;
             return this.next();
         }
+        instruction(action);
         var token = source[action];
         var cell = tape.models[pointer.get("index")];
         switch (token) {
