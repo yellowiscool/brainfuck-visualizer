@@ -87,9 +87,10 @@ section.machine {
             color: #fff;
             font-family: monospace;
             padding: 10px;
-            white-space: pre-wrap;
-            display: inline-block;
             overflow-y: scroll;
+            white-space: pre;
+            display: block;
+            word-wrap: normal;
         }
 
         section.editor #source span.caret {
