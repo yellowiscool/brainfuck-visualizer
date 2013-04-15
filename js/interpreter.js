@@ -14,9 +14,7 @@ var Interpreter = function (source, tape, pointer, out, instruction) {
     *
     * */
     var tokens = "<>+-.,[]";
-    var source = source,
-        jumps = [],
-        action = 0;
+    var jumps = [], action = 0;
 
     this.next = function () {
         if (action > source.length) throw {
