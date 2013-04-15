@@ -87,9 +87,9 @@ section.machine {
             color: #fff;
             font-family: monospace;
             padding: 10px;
-            overflow-y: scroll;
             white-space: pre;
             display: block;
+            overflow: scroll;
             word-wrap: normal;
         }
 
