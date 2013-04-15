@@ -13,5 +13,11 @@ command (character).
 More information:
 <http://en.wikipedia.org/wiki/Brainfuck>
 
+### Contributions
+
+- Fatih Erikli <http://github.com/fatiherikli>
+- Henry Heikkinen <https://github.com/rce>
+- Gabriele Cirulli <https://github.com/gabrielecirulli>
+
 ### Demo
 <http://fatiherikli.github.io/brainfuck-visualizer>
