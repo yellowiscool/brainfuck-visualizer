@@ -84,8 +84,8 @@ var InterpreterView = Backbone.View.extend({
         this.output.append(cell.char());
     },
     instruction: function(index) {
-        $("#source span.caret").contents().unwrap();
-        var src = $("#source").text();
+        this.editor.find("span.caret").contents().unwrap();
+        var src = this.editor.text();
         // XXX: There probably is a more elegant way to preserve the
         //      encoded characters. (< as &lt; and so on)
         var e = $('<div/>');
@@ -94,7 +94,7 @@ var InterpreterView = Backbone.View.extend({
             + e.text(src.charAt(index)).html()
             + "</span>"
             + e.text(src.substr(index + 1)).html();
-        $("#source").html(src);
+        this.editor.html(src);
     },
     continue: function () {
         this.interval = setInterval(function () {
@@ -121,7 +121,7 @@ var InterpreterView = Backbone.View.extend({
     },
     sourceChange: function() {
         this.stop();
-        $("#source").html($("#source").text());
+        this.editor.html(this.editor.text());
     }
 });
 
