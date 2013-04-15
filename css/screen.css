@@ -95,7 +95,9 @@ section.machine {
         }
 
         section.editor #source span.caret {
-            background-color: #def;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #000;
         }
 
         section.editor .button {
