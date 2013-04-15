@@ -81,7 +81,7 @@ section.machine {
             height: 315px;
             background-color: #5b5b5b;
             border: 3px solid #3e3e3e;
-            resize: none;
+            resize: vertical;
             outline: none;
             font-size: 20px;
             color: #fff;
