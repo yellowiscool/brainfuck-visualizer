@@ -57,6 +57,10 @@ var Interpreter = function (source, tape, pointer, out, instruction) {
             case "[":
                 if (cell.get("value") != 0) {
                     jumps.push(action);
+                } else {
+                    while(source[action] !== ']') {
+                        action++;
+                    }
                 }
                 break;
 
