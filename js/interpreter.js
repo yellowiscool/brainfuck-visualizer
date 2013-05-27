@@ -59,6 +59,7 @@ var Interpreter = function (source, tape, pointer, out, instruction) {
                     jumps.push(action);
                 } else {
                     var loops = 1;
+                    action++;
                     while (loops > 0) {
                         if (source[action] === "]") {
                             loops--;
