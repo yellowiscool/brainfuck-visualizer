@@ -55,11 +55,13 @@ var Interpreter = function (source, tape, pointer, out, instruction) {
                 break;
 
             case "[":
-                jumps.push(action);
+                if (cell.get("value") != 0) {
+                    jumps.push(action);
+                }
                 break;
 
             case "]":
-                if (cell.get("value") > 0) {
+                if (cell.get("value") != 0) {
                     action = jumps[jumps.length - 1];
                 } else {
                     jumps.pop();
