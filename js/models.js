@@ -12,6 +12,9 @@ var Cell = Backbone.Model.extend({
     dec: function () {
         this.increase("value", -1);
     },
+    put: function (c) {
+        this.set("value", c.charCodeAt(0));
+    },
     char: function () {
         return String.fromCharCode(this.get("value"))
     }

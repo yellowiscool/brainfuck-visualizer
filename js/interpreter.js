@@ -1,10 +1,12 @@
-var Interpreter = function (source, tape, pointer, out, instruction) {
+var Interpreter = function (source, tape, pointer,
+                            out, awaitInput, instruction) {
     /*
     * Brainfuck Interpreter Class
     * @source: Brainfuck script
     * @tape: Tape model
     * @pointer: Pointer model
     * @out: Output callback
+    * @awaitInput: Input callback 
     *
     * Usage:
     *
@@ -47,7 +49,7 @@ var Interpreter = function (source, tape, pointer, out, instruction) {
                 break;
 
             case ",":
-                // not implemented
+	            awaitInput(cell);
                 break;
 
             case ".":
