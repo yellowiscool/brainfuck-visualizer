@@ -58,7 +58,7 @@ var InterpreterView = Backbone.View.extend({
         "click #continue": "continue",
         "click #stop": "stop",
         "keyup #source": "sourceChange",
-        "keyup #input": "recieveInput"
+        "change #input": "recieveInput"
     },
     render: function () {
 	this.input  = this.$el.find("#input");
