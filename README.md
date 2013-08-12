@@ -19,6 +19,7 @@ More information:
 - Henry Heikkinen ([rce](https://github.com/rce))
 - Gabriele Cirulli ([gabrielecirulli](https://github.com/gabrielecirulli))
 - Asger Hautop Drewsen ([tyilo](https://github.com/Tyilo))
+- Dwillie ([dwille](https://github.com/dwillie))
 
 ### Demo
 <http://fatiherikli.github.io/brainfuck-visualizer>
