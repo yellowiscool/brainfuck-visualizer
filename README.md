@@ -29,7 +29,7 @@ GAH!
 GobidoaaahH !
 ```
 
-More informations here : <http://blogjaune.fr/GWAAAAAAAH>
+More informations here : <http://blogjaune.fr/gwaaaaaaah/>
 
 ### What is BrainFuck?
 
