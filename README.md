@@ -1,6 +1,14 @@
-### Brainfuck Visualizer
+### Presentation
 
-Javascript Brainfuck Interpreter + Visualizer
+Javascript GWAAAAAAAH Interpreter + Visualizer
+
+Forked from <https://github.com/fatiherikli/brainfuck-visualizer/>, a Javascript BrainFuck Interpreter + Visualizer
+
+### What is GWAAAAAAAH?
+
+GWAAAAAAAH is a programming language for raving rabbits (or lapins crétins).
+
+More informations here : <http://blogjaune.fr/GWAAAAAAAH>
 
 ### What is BrainFuck?
 
@@ -22,4 +30,4 @@ More information:
 - Dwillie ([dwille](https://github.com/dwillie))
 
 ### Demo
-<http://fatiherikli.github.io/brainfuck-visualizer>
+<http://yellowiscool.github.io/gwaaaaaaah-visualizer/>
