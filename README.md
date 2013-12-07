@@ -8,6 +8,27 @@ Forked from <https://github.com/fatiherikli/brainfuck-visualizer/>, a Javascript
 
 GWAAAAAAAH is a programming language for raving rabbits (or lapins crétins).
 
+A «Hello World» example :
+
+```
+DAAAAAAAAAAhhhhhh ?
+Rooooaaahahhahah!!
+GAAAAAAAGAAAAAAAAAAGAAAGAWWWWOM!
+GAAH!!
+GAH
+AAAAAAAH!
+Haaaaaooa
+BrrooaAAAH
+GAAH
+WWAAAAAAAAAAAAAAAH!!!!!!!
+GeeaaahH!
+AAAH
+OOOOOOH
+BlOOOOOOOOpppH
+GAH!
+GobidoaaahH !
+```
+
 More informations here : <http://blogjaune.fr/GWAAAAAAAH>
 
 ### What is BrainFuck?
