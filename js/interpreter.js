@@ -15,7 +15,7 @@ var Interpreter = function (source, tape, pointer,
      *    pointer.get("index") // 1
      *
      * */
-    var tokens = "<>+-.,[]";
+    var tokens = "WGAOHZRM";
     var jumps = [], action = 0;
 
     this.next = function () {
@@ -32,31 +32,31 @@ var Interpreter = function (source, tape, pointer,
         var token = source[action];
         var cell = tape.models[pointer.get("index")];
         switch (token) {
-        case "<":
+        case "W":
             pointer.left();
             break;
 
-        case ">":
+        case "G":
             pointer.right();
             break;
 
-        case "-":
+        case "O":
             cell.dec();
             break;
 
-        case "+":
+        case "A":
             cell.inc();
             break;
 
-        case ",":
+        case "Z":
 	    awaitInput(cell);
             break;
 
-        case ".":
+        case "H":
             out(cell);
             break;
 
-        case "[":
+        case "R":
             if (cell.get("value") != 0) {
                 jumps.push(action);
             } else {
@@ -64,16 +64,16 @@ var Interpreter = function (source, tape, pointer,
                 while (loops > 0) {
                     action++;
                     
-                    if (source[action] === "]") {
+                    if (source[action] === "M") {
                         loops--;
-                    } else if (source[action] === "[") {
+                    } else if (source[action] === "R") {
                         loops++;
                     }
                 }
             }
             break;
 
-        case "]":
+        case "M":
             if (cell.get("value") != 0) {
                 action = jumps[jumps.length - 1];
             } else {
