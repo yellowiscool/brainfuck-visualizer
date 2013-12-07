@@ -6,7 +6,7 @@ Forked from <https://github.com/fatiherikli/brainfuck-visualizer/>, a Javascript
 
 ### What is GWAAAAAAAH?
 
-GWAAAAAAAH is a programming language for raving rabbits (or lapins crétins).
+GWAAAAAAAH is a programming language for raving rabbids (or lapins crétins).
 
 A «Hello World» example :
 
